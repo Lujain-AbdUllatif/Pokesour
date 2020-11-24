@@ -1,4 +1,5 @@
 import React from "react";
+import "./Pokeitem.css";
 const imgUrl =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
 function Pokeitem(props) {

@@ -1,13 +1,14 @@
 import React from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
+import "./Pokelist.css";
 
 function Pokelist(props) {
-  const { pokemondata, filterword = "" } = props;
+  const { pokeData, filterword = "" } = props;
 
   return (
     <div>
       <ul className="pokelist">
-        {pokemondata
+        {pokeData
           .filter((pokemon) => pokemon.includes(filterword))
           .map((pokdata, index) => (
             <Pokeitem
