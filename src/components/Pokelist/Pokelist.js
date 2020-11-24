@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
+import "./Pokelist.css";
 
 function Pokelist(props) {
   const {

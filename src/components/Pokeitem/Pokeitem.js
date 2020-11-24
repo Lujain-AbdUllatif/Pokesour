@@ -1,4 +1,5 @@
 import React from "react";
+import "./Pokeitem.css";
 const imgUrl =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
 function Pokeitem(props) {
@@ -11,8 +12,8 @@ function Pokeitem(props) {
 
   return (
     <div className="Pokeitem">
-      <h2>{name}</h2>
-      <img src={`${imgUrl}${_url}.png`} alt={_url} />
+      <img src={`${imgUrl}${index}.png`} />
+      <h2>{objectpokemon.name}</h2>
     </div>
   );
 }
