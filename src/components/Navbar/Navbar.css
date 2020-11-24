@@ -1,0 +1,21 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 50%;
+}
+
+a {
+  display: flex;
+}
+.btns {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  font-size: 33px;
+  color: #f53d1a;
+}
