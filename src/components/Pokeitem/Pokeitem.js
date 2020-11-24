@@ -12,8 +12,8 @@ function Pokeitem(props) {
 
   return (
     <div className="Pokeitem">
-      <img src={`${imgUrl}${index}.png`} />
-      <h2>{objectpokemon.name}</h2>
+      <img src={`${imgUrl}${_url}.png`} />
+      <h2>{name}</h2>
     </div>
   );
 }
