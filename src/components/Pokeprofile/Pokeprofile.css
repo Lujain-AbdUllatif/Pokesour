@@ -1,0 +1,45 @@
+.profile_holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profile_holder h1 {
+  font-size: 40px;
+}
+
+.profile_img_section {
+  /* width: 100%; */
+  padding: 30px 20px;
+}
+
+.profile_img_section img {
+  width: 100%;
+}
+
+.profile_img_section button {
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 7px 0;
+  width: 130px;
+}
+
+.profile_desc {
+  padding: 30px 0;
+}
+
+.profile_desc h3 {
+  text-align: left;
+}
+
+.profile_desc p {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.animated_profile {
+  width: 100%;
+}

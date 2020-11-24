@@ -1,0 +1,10 @@
+.gif_holder {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.gif_holder img.gif_img {
+  width: 18%;
+}
