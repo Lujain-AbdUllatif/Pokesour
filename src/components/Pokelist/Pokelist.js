@@ -3,13 +3,16 @@ import Pokeitem from "../Pokeitem/Pokeitem";
 import "./Pokelist.css";
 
 function Pokelist(props) {
-  const { pokeData, filterword = "" } = props;
+  const {
+    pokeData: { results },
+    filterword = "",
+  } = props;
 
   return (
     <div>
       <ul className="pokelist">
-        {pokeData
-          .filter((pokemon) => pokemon.includes(filterword))
+        {results
+          .filter((pokemon) => pokemon.name.includes(filterword))
           .map((pokdata, index) => (
             <Pokeitem
               className="carddata"
@@ -18,7 +21,6 @@ function Pokelist(props) {
               index={index + 1}
             />
           ))}
-        )
       </ul>
     </div>
   );

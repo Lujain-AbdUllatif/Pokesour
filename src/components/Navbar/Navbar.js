@@ -9,10 +9,10 @@ function Navbar(props) {
       </a>
       <div className="btns">
         <a>
-          <i class="far fa-heart"></i>
+          <i className="far fa-heart"></i>
         </a>
         <a>
-          <i class="fas fa-arrow-left"></i>
+          <i className="fas fa-arrow-left"></i>
         </a>
       </div>
     </div>
