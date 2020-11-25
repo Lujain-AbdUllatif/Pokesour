@@ -28,7 +28,7 @@ function Pokeprofile(props) {
           <h3>Moves :</h3>
           <ul>
             {moves.map((move) => (
-              <li>{move.move.name}</li>
+              <li key={move.move.name}>{move.move.name}</li>
             ))}
           </ul>
         </div>
@@ -36,7 +36,7 @@ function Pokeprofile(props) {
           <h3>Abilities :</h3>
           <ul>
             {abilities.map((abl) => (
-              <li>{abl.ability.name}</li>
+              <li key={abl.ability.name}>{abl.ability.name}</li>
             ))}
           </ul>
         </div>

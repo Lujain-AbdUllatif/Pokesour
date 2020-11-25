@@ -3,30 +3,39 @@
 .Pokeitem {
   width: 80%;
   display: flex;
-  justify-content: space-around;
-  border: 1px black solid;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
   font-style: oblique;
   margin: 20px;
   padding: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+}
+
+.innerItem {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.innerItem .fa-heart {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .Pokeitem img {
-  width: 15%;
-  margin-right: 50px;
-}
-
-.Pokeitem h2 {
-  width: 60%;
-  text-align: center;
-  outline: none;
-  cursor: pointer;
-  font-family: "cairo", sans-serif;
-  font-size: 25px;
+  width: 80%;
+  /* margin-right: 50px; */
 }
 
 .links_poke {
   text-decoration: none !important;
   color: black;
+  /* font-size: 40px; */
 }
 
 @media (max-width: 412px) {

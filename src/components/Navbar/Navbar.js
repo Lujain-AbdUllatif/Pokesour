@@ -11,6 +11,7 @@ function Navbar(props) {
   };
 
   const isHome = location === "/";
+  const isFav = location === "/favorites";
 
   return (
     <div className="navBar">
@@ -18,11 +19,17 @@ function Navbar(props) {
         <img src="/logo.png" alt="PokeSour Logo" id="logo" />
       </Link>
       <div className="btns">
-        <Link to="/favorites" className="links" activeStyle={{ color: "red" }}>
-          <i className="far fa-heart"></i>
-        </Link>
+        {isHome && (
+          <Link
+            to="/favorites"
+            className="links"
+            activestyle={{ color: "red" }}
+          >
+            <i className="fav_page fas fa-heart"></i>
+          </Link>
+        )}
         {!isHome && (
-          <button onClick={handleBack}>
+          <button onClick={handleBack} className="goback_btn">
             <i className="fas fa-arrow-left"></i>
           </button>
         )}

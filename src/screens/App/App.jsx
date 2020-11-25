@@ -13,7 +13,7 @@ function App(props) {
     getPokemonsApi()
       .then((res) => res.json())
       .then((res) => {
-        setPokeData(res);
+        setPokeData(res.results);
         console.log(res);
       })
       .catch((e) => console.log(e));
@@ -22,7 +22,7 @@ function App(props) {
   const setLocalStorage = () => {
     let localFavList = localStorage.getItem("favList");
     if (!localFavList) {
-      localStorage.setItem("favList", JSON.stringify([]));
+      localStorage.setItem("favList", JSON.stringify({}));
       localFavList = localStorage.getItem("favList");
     }
   };

@@ -28,6 +28,15 @@
   color: #f53d1a;
 }
 
+.fav_page {
+  font-size: 50px;
+}
+
+.goback_btn {
+  cursor: pointer;
+  outline-style: none;
+}
+
 #logo {
   width: 60%;
 }

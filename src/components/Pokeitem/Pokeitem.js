@@ -11,49 +11,32 @@ function Pokeitem(props) {
 
   const {
     objectpokemon: { name, url },
+    setIsChanged,
   } = props;
 
   const indexUrl = url.split("/");
 
-  const _url = indexUrl[indexUrl.length - 2];
+  const pokeId = indexUrl[indexUrl.length - 2];
 
   // We are creating a function for saving fav items in the local storage
   const favStorage = () => {
     const localFavList = JSON.parse(localStorage.getItem("favList"));
-    // const localFavList2 = JSON.parse(localStorage.getItem("favList"));
-
-    if (localFavList.length === 0) {
-      localFavList.push({
-        name: name,
-        url: url,
-        imgUrl: `${imgUrl}${_url}.png`,
-      });
+    const addedItem = { name: name, url: url, imgUrl: `${pokeId}.png` };
+    localFavList[name] = addedItem;
+    if (!isFav) {
+      localStorage.setItem("favList", JSON.stringify(localFavList));
+    } else if (isFav) {
+      delete localFavList[name];
+      localStorage.setItem("favList", JSON.stringify(localFavList));
     }
-
-    localFavList.forEach((fav) => {
-      if (fav?.name !== name) {
-        localFavList.push({
-          name: name,
-          url: url,
-          imgUrl: `${imgUrl}${_url}.png`,
-        });
-      } else {
-        localFavList.splice(localFavList.indexOf(fav), 1);
-      }
-      console.log(localFavList);
-    });
-
-    localStorage.setItem("favList", JSON.stringify(localFavList));
-
     setIsFav(!isFav);
+    setIsChanged(true);
   };
 
   // function for fetching the name from the local storage to render the heart
   const isFavLocal = () => {
     const favList = JSON.parse(localStorage.getItem("favList"));
-    favList.forEach((fav) => {
-      fav.name === name && setIsFav(true);
-    });
+    favList[name] && setIsFav(true);
   };
 
   useEffect(() => {
@@ -62,14 +45,26 @@ function Pokeitem(props) {
 
   return (
     <div className="Pokeitem">
-      <img src={`${imgUrl}${_url}.png`} />
-      <Link to={`/profile/${name}`} className="links_poke">
-        <h2>{name}</h2>
-      </Link>
-      <i
-        onClick={favStorage}
-        className={`${isFav ? "fas" : "far"} fa-heart`}
-      ></i>
+      <div className="innerItem">
+        <Link to={`/profile/${name}`} className="links_poke">
+          {!(Number(pokeId) > 900) ? (
+            <img src={`${imgUrl}${pokeId}.png`} alt={pokeId} />
+          ) : (
+            <i class="fas fa-dragon"></i>
+          )}
+        </Link>
+      </div>
+      <div className="innerItem">
+        <Link to={`/profile/${name}`} className="links_poke">
+          {name}
+        </Link>
+      </div>
+      <div className="innerItem">
+        <i
+          onClick={favStorage}
+          className={`${isFav ? "fas" : "far"} fa-heart`}
+        ></i>
+      </div>
     </div>
   );
 }
