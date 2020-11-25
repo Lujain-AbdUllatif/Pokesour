@@ -3,20 +3,45 @@
   align-items: center;
   border-bottom: 1px solid black;
   justify-content: space-between;
+  height: 13vh;
   width: 100%;
 }
 
-#logo {
-  width: 50%;
-}
-
-a {
-  display: flex;
-}
 .btns {
   display: flex;
+  height: 100%;
+  align-items: center;
   justify-content: space-around;
-  width: 30%;
-  font-size: 33px;
+  width: 50%;
+  font-size: 35px;
   color: #f53d1a;
+}
+
+.btns a {
+  color: #f53d1a;
+}
+
+.btns button {
+  border: none;
+  background: none;
+  font-size: 35px;
+  color: #f53d1a;
+}
+
+#logo {
+  width: 60%;
+}
+
+@media only screen and (min-width: 700px) {
+  .navBar {
+    height: 14vh;
+  }
+
+  .btns {
+    width: 20%;
+  }
+
+  #logo {
+    height: 107px;
+  }
 }

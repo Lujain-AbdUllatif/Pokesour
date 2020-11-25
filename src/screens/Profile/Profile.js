@@ -10,4 +10,4 @@ function Profile(props) {
   );
 }
 
-export default Pokeprofile;
+export default Profile;
