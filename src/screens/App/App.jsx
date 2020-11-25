@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
 import Searchbar from "../../components/Searchbar/Searchbar";
-import Pokeprofile from "../../components/Pokeprofile/Pokeprofile";
 import Pokelist from "../../components/Pokelist/Pokelist";
-
+import Paging from "../../components/Paging/Paging";
 import { getPokemonsApi } from "../../api/api";
 import "./App.css";
-
 
 function App() {
   const [searchWord, setSearchWord] = useState("");
@@ -17,7 +14,6 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         setPokeData(res);
-        
       })
       .catch((e) => console.log(e));
   };
@@ -27,9 +23,14 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Navbar />
-      <Searchbar setSearchWord={setSearchWord}/>
-      {pokeData && <Pokelist  pokeData={pokeData} filterword={searchWord}/>}
+      <Searchbar setSearchWord={setSearchWord} />
+      {pokeData && (
+        <>
+          <Paging getPokemons={getPokemons} />
+          <Pokelist pokeData={pokeData} filterword={searchWord} />
+          <Paging getPokemons={getPokemons} />
+        </>
+      )}
     </div>
   );
 }

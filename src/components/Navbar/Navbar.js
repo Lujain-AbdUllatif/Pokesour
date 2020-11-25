@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar(props) {
   return (
     <div className="navBar">
-      <a>
+      <Link to="/">
         <img src="/logo.png" alt="PokeSour Logo" id="logo" />
-      </a>
+      </Link>
       <div className="btns">
-        <a>
+        <Link to="/favorites">
           <i className="far fa-heart"></i>
-        </a>
-        <a>
+        </Link>
+        <Link to="/profile">
           <i className="fas fa-arrow-left"></i>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
+import "./Pokelist.css";
 
 function Pokelist(props) {
   const {
     pokeData: { results },
     filterword = "",
   } = props;
+
+  useEffect(() => {}, [filterword]);
 
   return (
     <div>
@@ -16,8 +19,8 @@ function Pokelist(props) {
             <Pokeitem
               className="carddata"
               objectpokemon={pokdata}
+              // url={pokdata.url.match(/\d+/)[0]}
               key={index}
-              index={index + 1}
             />
           ))}
       </ul>

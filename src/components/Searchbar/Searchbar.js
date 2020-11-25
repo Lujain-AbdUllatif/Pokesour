@@ -1,4 +1,5 @@
 import React from "react";
+import "./Searchbar.css";
 
 function Searchbar(props) {
   const [inputWord, setInputWord] = React.useState("");
@@ -9,7 +10,13 @@ function Searchbar(props) {
     sendSearch();
   }, [inputWord]);
   return (
-    <input type="text" value={inputWord} onChange={handleTextChanged}></input>
+    <input
+      placeholder="Pokemon Name"
+      className="search"
+      type="text"
+      value={inputWord}
+      onChange={handleTextChanged}
+    ></input>
   );
 }
 export default Searchbar;
