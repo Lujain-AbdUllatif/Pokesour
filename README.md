@@ -3,8 +3,6 @@
 Search for your favorite pokemons !
 visit the site: <h2><a href="https://friendly-poincare-a338fe.netlify.app">Pokesour</h2>
 
-<img src="https://image4.owler.com/logo/crowdly_owler_20160226_201601_original.png">
-
 # Instructions & Info
 
 # Photos
