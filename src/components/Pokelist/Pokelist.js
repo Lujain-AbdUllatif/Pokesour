@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
 import "./Pokelist.css";
 
@@ -7,6 +7,8 @@ function Pokelist(props) {
     pokeData: { results },
     filterword = "",
   } = props;
+
+  useEffect(() => {}, [filterword]);
 
   return (
     <div>
@@ -18,7 +20,6 @@ function Pokelist(props) {
               className="carddata"
               objectpokemon={pokdata}
               key={index}
-              index={index + 1}
             />
           ))}
       </ul>
