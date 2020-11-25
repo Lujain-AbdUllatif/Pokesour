@@ -9,7 +9,6 @@ function App(props) {
   const [searchWord, setSearchWord] = useState("");
   const [pokeData, setPokeData] = useState(null);
 
-
   const getPokemons = () => {
     getPokemonsApi()
       .then((res) => res.json())
@@ -19,6 +18,18 @@ function App(props) {
       })
       .catch((e) => console.log(e));
   };
+
+  const setLocalStorage = () => {
+    let localFavList = localStorage.getItem("favList");
+    if (!localFavList) {
+      localStorage.setItem("favList", JSON.stringify([]));
+      localFavList = localStorage.getItem("favList");
+    }
+  };
+
+  useEffect(() => {
+    setLocalStorage();
+  }, []);
 
   useEffect(() => {
     getPokemons();
