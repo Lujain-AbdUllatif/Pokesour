@@ -7,15 +7,9 @@ import Favorites from "../Favorites/Favorites";
 import Navbar from "../../components/Navbar/Navbar";
 
 function Router() {
-  const [loca, setLoca] = React.useState("/");
-
-  const handleLoca = (location) => {
-    setLoca(location);
-  };
-
   return (
     <>
-      <Navbar location={loca} />
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <App />

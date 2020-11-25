@@ -1,11 +1,14 @@
-import "./App.css";
-import Navbar from "../../components/Navbar/Navbar";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import Searchbar from "../../components/Searchbar/Searchbar";
+import Pokelist from "../../components/Pokelist/Pokelist";
+import Paging from "../../components/Paging/Paging";
+import { getPokemonsApi } from "../../api/api";
+import "./App.css";
 
 function App() {
-  const [searchWord, setSearchWord] = React.useState("");
+  const [searchWord, setSearchWord] = useState("");
+  const [pokeData, setPokeData] = useState(null);
+
   const getPokemons = () => {
     getPokemonsApi()
       .then((res) => res.json())
@@ -16,10 +19,19 @@ function App() {
       .catch((e) => console.log(e));
   };
 
+  useEffect(() => {
+    getPokemons();
+  }, []);
   return (
     <div className="App">
-      <Navbar />
-      <Searchbar setSearchWord={setSearchWord}></Searchbar>
+      <Searchbar setSearchWord={setSearchWord} />
+      {pokeData && (
+        <>
+          <Paging getPokemons={getPokemons} />
+          <Pokelist pokeData={pokeData} filterword={searchWord} />
+          <Paging getPokemons={getPokemons} />
+        </>
+      )}
     </div>
   );
 }

@@ -12,13 +12,11 @@ function Navbar(props) {
 
   const isHome = location === "/";
 
-  isHome && console.log("IM HOME");
-
   return (
     <div className="navBar">
-      <a>
+      <Link to="/">
         <img src="/logo.png" alt="PokeSour Logo" id="logo" />
-      </a>
+      </Link>
       <div className="btns">
         <Link to="/favorites" className="links" activeStyle={{ color: "red" }}>
           <i className="far fa-heart"></i>

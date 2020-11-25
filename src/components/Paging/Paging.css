@@ -1,0 +1,28 @@
+.paging_holder {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.paging_holder button {
+  width: 120px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 7px;
+  outline-style: none;
+  background: #639fff;
+  border: none;
+}
+
+.paging_holder button:hover {
+  background: #f83d3d;
+  color: #ffffff;
+}
+
+.paging_holder button:active {
+  background: #f60000;
+  color: #ffffff;
+}
