@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
 import "./Pokelist.css";
 
@@ -19,7 +19,6 @@ function Pokelist(props) {
             <Pokeitem
               className="carddata"
               objectpokemon={pokdata}
-              // url={pokdata.url.match(/\d+/)[0]}
               key={index}
             />
           ))

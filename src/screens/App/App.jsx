@@ -15,6 +15,7 @@ function App(props) {
       .then((res) => res.json())
       .then((res) => {
         setPokeData(res);
+        console.log(res);
       })
       .catch((e) => console.log(e));
   };
