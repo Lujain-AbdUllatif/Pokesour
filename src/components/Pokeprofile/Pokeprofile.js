@@ -1,29 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Pokeprofile.css";
 import Giflist from "../Giflist/Giflist";
 
 function Pokeprofile(props) {
+  const {
+    pokeData: {
+      name,
+      sprites: { other, versions },
+      moves,
+      abilities,
+    },
+  } = props;
+
+  const links = versions["generation-v"]["black-white"].animated;
+
+  const imgUrl = other["official-artwork"].front_default;
+
   return (
     <div className="profile_holder">
-      <h1>Name</h1>
+      <h1>{name}</h1>
       <div className="profile_img_section">
-        <img
-          src={
-            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-          }
-          alt="poke"
-        />
-        <button>Toggle</button>
+        <img src={imgUrl} alt="poke" />
+        {/* <button>Toggle</button> */}
       </div>
       <div className="profile_desc">
-        <h3>Description :</h3>
-        <p>
-          lorem loremlorem loremlorem loremlorem loremlorem loremlorem
-          loremlorem loremlorem loremlorem loremlorem lorem
-        </p>
+        <div>
+          <h3>Moves :</h3>
+          <ul>
+            {moves.map((move) => (
+              <li>{move.move.name}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Abilities :</h3>
+          <ul>
+            {abilities.map((abl) => (
+              <li>{abl.ability.name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="animated_profile">
-        <Giflist />
+        {links && <Giflist gifLinks={links} />}
       </div>
     </div>
   );

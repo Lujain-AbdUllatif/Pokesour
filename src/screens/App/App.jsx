@@ -5,9 +5,10 @@ import Paging from "../../components/Paging/Paging";
 import { getPokemonsApi } from "../../api/api";
 import "./App.css";
 
-function App() {
+function App(props) {
   const [searchWord, setSearchWord] = useState("");
   const [pokeData, setPokeData] = useState(null);
+
 
   const getPokemons = () => {
     getPokemonsApi()
@@ -26,9 +27,9 @@ function App() {
       <Searchbar setSearchWord={setSearchWord} />
       {pokeData && (
         <>
-          <Paging getPokemons={getPokemons} />
+          {/* <Paging getPokemons={getPokemons} /> */}
           <Pokelist pokeData={pokeData} filterword={searchWord} />
-          <Paging getPokemons={getPokemons} />
+          {/* <Paging getPokemons={getPokemons} /> */}
         </>
       )}
     </div>

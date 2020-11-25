@@ -22,7 +22,8 @@ function Pokelist(props) {
               // url={pokdata.url.match(/\d+/)[0]}
               key={index}
             />
-          ))}
+          ))
+          .slice(0, 20)}
       </ul>
     </div>
   );

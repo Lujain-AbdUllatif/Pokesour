@@ -11,15 +11,10 @@ function Router() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-        <Route path="/favorites">
-          <Favorites />
-        </Route>
+        <Route exact path="/" component={App}/>   
+        <Route path="/profile/:id" component={Profile}/> 
+        <Route exact path="/favorites" component={Favorites}/> 
+        
       </Switch>
     </>
   );
