@@ -1,0 +1,10 @@
+.related_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.related_innerItem img {
+  width: 60%;
+}

@@ -10,6 +10,8 @@ function Favorites(props) {
     setLocalFav(pokeData);
   };
 
+  useEffect(() => {}, [localFav]);
+
   useEffect(() => {
     getLocalFav();
   }, []);

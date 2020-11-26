@@ -19,6 +19,7 @@ function Pokeitem(props) {
   const pokeId = indexUrl[indexUrl.length - 2];
 
   // We are creating a function for saving fav items in the local storage
+
   const favStorage = () => {
     const localFavList = JSON.parse(localStorage.getItem("favList"));
     const addedItem = { name: name, url: url, imgUrl: `${pokeId}.png` };
@@ -30,7 +31,6 @@ function Pokeitem(props) {
       localStorage.setItem("favList", JSON.stringify(localFavList));
     }
     setIsFav(!isFav);
-    setIsChanged(true);
   };
 
   // function for fetching the name from the local storage to render the heart
