@@ -9,8 +9,8 @@ A website for Pokémon fans to surf through Pokémon list and add anyone to thei
 
 # Team
 
-[Alaa Bashiyi](https://github.com/alaabashiyi)
-[Lujain Abd-Ullatif](https://github.com/Lujain-AbdUllatif)
-[Nuwrass Azzam](https://github.com/nuwrss)
-[Shoog Kabiya](https://github.com/shoogkabiya)
+- [Alaa Bashiyi](https://github.com/alaabashiyi)
+- [Lujain Abd-Ullatif](https://github.com/Lujain-AbdUllatif)
+- [Nuwrass Azzam](https://github.com/nuwrss)
+- [Shoog Kabiya](https://github.com/shoogkabiya)
 
