@@ -3,11 +3,11 @@ A website for Pokémon fans to surf through Pokémon list and add anyone to thei
 *Sadly, the work on the project has stopped, so you might face issues using some features*  
 if you are a Pokémon fan <a href="https://friendly-poincare-a338fe.netlify.app">click here!</a>  
 
-### Main Technologies
+## Main Technologies
 - React.js
 - Node.js
 
-### Team
+## Team
 
 - [Alaa Bashiyi](https://github.com/alaabashiyi)
 - [Lujain Abd-Ullatif](https://github.com/Lujain-AbdUllatif)
