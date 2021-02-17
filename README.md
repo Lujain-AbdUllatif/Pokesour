@@ -1,19 +1,16 @@
 # Pokesour
-Is a site that you can saerch about information about the pokemon you need 
-in our site you can also add your pokemons as favorites pokemons .
-Search for your favorite pokemons !
+A website for Pokémon fans to surf through Pokémon list and add anyone to their favourite list. 
+<p><a href="https://friendly-poincare-a338fe.netlify.app">If you are Pokémon fan, what are you waiting! Click here to check the website :)</p>
 
-visit the site: <h2><a href="https://friendly-poincare-a338fe.netlify.app">Pokesour</h2>
 
-# Instructions & Info
+# Built by
+- React.js
+- Node.js
 
-# Photos
+# Team
 
-# Built with:
-Js,css,react 
-# Contact
+[Alaa Bashiyi](https://github.com/alaabashiyi)
+[Lujain Abd-Ullatif](https://github.com/Lujain-AbdUllatif)
+[Nuwrass Azzam](https://github.com/nuwrss)
+[Shoog Kabiya](https://github.com/shoogkabiya)
 
-Alaa: [@GitHub](https://github.com/alaabashiyi) <br>
-shooq: [@GitHub](https://github.com/shoogkabiya) <br>
-Nuwrss: [@GitHub](https://github.com/nuwrss) <br>
-Lujain: [@GitHub](https://github.com/Lujain-AbdUllatif) <br>
