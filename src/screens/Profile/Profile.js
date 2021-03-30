@@ -40,13 +40,16 @@ function Profile(props) {
   return (
     <div className="profile_main_holder">
       {pokeData && <Pokeprofile {...props} pokeData={pokeData} />}
-      {pokeBigData && (
-        <RelatedList
-          {...props}
-          relatedName={relatedName}
-          pokeData={pokeBigData}
-        />
-      )}
+      {
+        // pokeBigData
+        // && (
+        //   <RelatedList
+        //     {...props}
+        //     relatedName={relatedName}
+        //     pokeData={pokeBigData}
+        //   />
+        // )
+      }
     </div>
   );
 }

@@ -35,7 +35,7 @@ function Pokelist(props) {
       prevScrollY.current = currentScrollY;
       setScrolled(~~currentScrollY);
 
-      const itemHeight = itemsList.current.clientHeight * (3 / 4);
+      const itemHeight = 100 | (itemsList.current.clientHeight * (3 / 4));
 
       if (
         ~~currentScrollY >= ~~itemHeight &&
